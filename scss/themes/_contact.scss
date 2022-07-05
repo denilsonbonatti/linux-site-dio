@@ -1,0 +1,23 @@
+.contact {
+	&-info {
+		&__icon {
+			margin-right: 20px;
+
+			i,
+			span {
+				font-size: 20px;
+				color: $primary-color;
+			}
+		}
+
+		h3 {
+			font-size: 1rem;
+			font-weight: 300;
+			color: $white;
+
+			a {
+				color: $white;
+			}
+		}
+	}
+}

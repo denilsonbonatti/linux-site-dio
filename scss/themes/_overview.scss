@@ -1,0 +1,46 @@
+.overview {
+	&__single {
+		padding: 20px 30px;
+		background: rgba(255, 255, 255, .10);
+		transition: all .4s;
+
+		&__icon {
+			margin-right: 15px;
+
+			i,
+			span {
+				font-size: 2.625rem;
+				color: $primary-color;
+			}
+		}
+
+		.media-body {
+			h3 {
+				font-size: 32px;
+				color: $white;
+				font-weight: 500;
+				margin-bottom: .2rem;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		&:hover {
+			background: $primary-color;
+			color: $charade;
+
+			h3 {
+				color: $charade;
+			}
+
+			.overview__single__icon {
+				i,
+				span {
+					color: $charade;
+				}
+			}
+		}
+	}
+}

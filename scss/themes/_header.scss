@@ -1,0 +1,223 @@
+/* Home Banner Area css
+============================================================================================ */
+
+.open {
+	.side_menu {
+		right: 0px;
+	}
+	.canvus_menu {
+		.toggle_icon {
+			span {
+				background: transparent !important;
+				&:before {
+					@include transform(rotate(45deg));
+					top: 0px;
+					@include transition(all 0.5s ease-in-out);
+				}
+				&:after {
+					width: 30px;
+					@include transform(rotate(-45deg));
+					bottom: 0px;
+					@include transition(all 0.5s ease-in-out);
+				}
+			}
+		}
+	}
+}
+
+.canvus_menu {
+	overflow: hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.float-right {
+		width: 100px;
+		height: 100px;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		padding: 15px;
+		background: $primary-color;
+		display: inline-block;
+		@media (max-width: 1200px) {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	.toggle_icon {
+		cursor: pointer;
+		position: fixed;
+		height: 20px;
+		width: 30px;
+		top: 27px;
+		right: 32px;
+		@include transition();
+		background: transparent;
+		padding: 20px;
+		z-index: 9999;
+		@media (max-width: 1200px) {
+			top: 13px;
+			right: 20px;
+		}
+		span {
+			height: 2px;
+			width: 20px;
+			display: block;
+			background: $black;
+			cursor: pointer;
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			@include transition(all 0.5s ease-in-out);
+			&:before {
+				content: "";
+				height: 2px;
+				width: 30px;
+				display: block;
+				background: $black;
+				right: 0px;
+				top: -10px;
+				position: absolute;
+				@include transition(all 0.5s ease-in-out);
+			}
+			&:after {
+				content: "";
+				height: 2px;
+				width: 25px;
+				display: block;
+				background: $black;
+				right: 0px;
+				bottom: -10px;
+				position: absolute;
+				@include transition(all 0.5s ease-in-out);
+			}
+		}
+		&.blog {
+			span {
+				background: #ffffff;
+				&:after,
+				&:before {
+					background: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+.side_menu {
+	position: fixed;
+	right: -29%;
+	top: 0px;
+	height: 100%;
+	background: $charade;
+	width: 100%;
+	max-width: 29%;
+	text-align: center;
+	padding-left: 20px;
+	z-index: 2;
+	padding-right: 20px;
+	@include transition();
+	opacity: .95;
+	@media (max-width: 575px) {
+		max-width: 75%;
+		right: -75%;
+	}
+	.input-group {
+		display: block;
+		position: relative;
+		input {
+			width: 100%;
+			border: none;
+			border-radius: 0px;
+			height: 40px;
+			padding: 0px 28px 0px 15px;
+			background: $primary-color;
+			line-height: 40px;
+			font-size: 12px;
+			color: #fff;
+			font-family: $text-color;
+			outline: none;
+			box-shadow: none;
+			@include placeholder {
+				font-size: 12px;
+				color: #fff;
+				font-family: $text-color;
+			}
+		}
+		.input-group-append {
+			position: absolute;
+			right: 10px;
+			top: 47%;
+			transform: translateY(-50%);
+			z-index: 4;
+			.btn-outline-secondary {
+				border: none;
+				border-radius: 0px;
+				color: #fff;
+				padding: 0px;
+			}
+		}
+	}
+	.menu_right {
+		// margin-top: 120px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include transform(translate(-50%, -50%));
+
+		max-height: 420px;
+		@media (max-width: 1440px) {
+			// margin-top: 20px;
+		}
+		li {
+			margin-bottom: 25px;
+			@media (max-width: 1440px) {
+				margin-bottom: 15px;
+			}
+			&:last-child {
+				margin-bottom: 0px;
+			}
+			a {
+				font-size: 18px;
+				font-weight: bold;
+				color: $white;
+				text-transform: capitalize;
+				@media (max-width: 575px) {
+					font-size: 15px;
+				}
+				&:hover {
+					color: $primary-color;
+				}
+			}
+			ul {
+				display: none;
+				li {
+					text-align: left;
+					margin-bottom: 10px;
+					margin-left: 60px;
+					a {
+						font-size: 14px;
+						color: $white;
+						text-transform: capitalize;
+						@include transition();
+					}
+					&:first-child {
+						margin-top: 10px;
+					}
+					&:hover {
+						a {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Home Banner Area css
+============================================================================================ */

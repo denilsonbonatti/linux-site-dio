@@ -1,0 +1,33 @@
+.about {
+	&__img {
+		position: relative;
+
+		&__date {
+			display: inline-block;
+			position: absolute;
+			bottom: 11%;
+			left: 13%;
+			background: $primary-color;
+			color: $black;
+			padding: .9rem 1.2rem 1rem 1.2rem;
+			transition: all .4s;
+
+			h3 {
+				font-size: 2rem;
+				font-weight: 500;
+				font-family: 'Oswald', sans-serif;
+				margin-bottom: .2rem;
+			}
+
+			p {
+				margin-bottom: 0;
+				font-size: 0.75rem;
+			}
+
+			&:hover {
+				color: $black;
+				opacity: .96;
+			}
+		}
+	}
+}

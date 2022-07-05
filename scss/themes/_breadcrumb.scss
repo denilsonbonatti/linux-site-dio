@@ -1,0 +1,36 @@
+.breadcrumb {
+	padding: 0;
+	background: transparent;
+
+	span {
+		cursor: initial !important;
+	}
+
+	.btn {
+		background: $primary-color;
+		border-color: $primary-color;
+		color: $black;
+
+		&.btn--rightBorder:after {
+			background: $primary-color;
+			right: -1.5rem;
+		}
+
+		&:after {
+			content: "|";
+			margin: 0 5px 0 9px;
+		}
+
+		&:last-child:after {
+			content: "";
+		}
+
+		&:first-child {
+			padding-right: 0;
+		}
+
+		&:not(:first-child) {
+			padding-left: 0;
+		}
+	}
+}

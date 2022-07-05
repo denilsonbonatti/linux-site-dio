@@ -1,0 +1,18 @@
+.social-icons {
+	li {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		a {
+			display: block;
+			color: #8f8f8f;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}

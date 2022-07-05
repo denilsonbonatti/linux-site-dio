@@ -1,0 +1,144 @@
+.hero {
+	&__slide {
+		position: relative;
+
+		img {
+			width: 100%;
+			max-height: 500px;
+
+			@media (min-width: 1200px) {
+				max-height: 900px;
+			}
+		}
+
+		&Content {
+			position: absolute;
+			width: 100%;
+			bottom: 125px;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 400px;
+			padding: 50px 30px;
+			z-index: 5;
+
+			@media (min-width: 1200px) {
+				margin-left: 340px;
+			}
+			@media (max-width: 575px) {
+				bottom: 60px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 100%, 0 100%, 0 0);
+				background: rgb(38, 37, 51);
+				z-index: -1;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgb(38, 37, 51);
+				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
+				left: -35px;
+				bottom: -28px;
+				transform: rotate(180deg);
+				z-index: 1;
+			}
+
+			&--right {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: $primary-color;
+				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
+				left: 10px;
+				top: -10px;
+				z-index: 1;
+			}
+
+			h1 {
+				font-size: 2rem;
+				color: $white;
+				font-weight: 300;
+				margin-bottom: 20px;
+			}
+
+			p {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}
+
+.heroCarousel {
+	position: relative;
+}
+
+.heroCarousel .owl-dots {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.testimonial {
+	&__slide {
+		blockquote {
+			font-size: 1.125rem;
+			font-style: italic;
+			margin-bottom: 25px;
+		}
+
+		h3 {
+			font-size: 1.3125rem;
+			font-weight: 300;
+			color: $white;
+		}
+
+		p {
+			color: #777777;
+		}
+	}
+}
+
+// owl carousel dots rule
+.owl-dots button:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+.testimonialCarousel .owl-nav.disabled + .owl-dots {
+	margin-top: 85px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	margin: 0;
+	min-width: 50px;
+	height: 2px;
+	border-radius: 0;
+	outline: 2px solid transparent;
+	background: #34343c;
+	transition: 0.3s;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+	height: 4px;
+	background: rgb(249, 204, 65);
+	border-radius: 3px;
+	box-shadow: 0px 1px 0px rgb(249, 204, 65);
+}
+
+.testimonialCarousel .owl-dots .owl-dot span {
+	box-shadow: inset 0px 3px 0px 0px #262533;
+}

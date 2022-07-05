@@ -1,0 +1,54 @@
+.section-intro {
+	&__title {
+		font-size: 0.75rem;
+		color: $primary-color;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+
+		&.left-border {
+			padding-left: 35px;
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				min-width: 20px;
+				height: 2px;
+				background: $primary-color;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+			}
+		}
+	}
+
+	&__subtitle {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 300;
+		font-size: 2.625rem;
+		color: $white;
+		margin-bottom: 1.5rem;
+
+		&.bottom-border {
+			padding-bottom: 30px;
+			margin-bottom: 50px;
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 2px;
+				min-width: 100px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: $primary-color;
+			}
+		}
+
+		&.small {
+			font-size: 2rem;
+		}
+	}
+}

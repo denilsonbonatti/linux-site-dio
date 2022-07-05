@@ -1,0 +1,49 @@
+.form {
+	&-subscribe {
+		.form-control {
+			border-radius: 0;
+			border: 0;
+			font-size: 13px;
+			height: 40px;
+			background: rgba(255, 255, 255, .10);
+			color: $white;
+
+			&::placeholder {
+				color: rgba(255, 255, 255, .5);
+			}
+		}
+
+		.btn-append {
+			border: 0;
+			padding: 0 .8rem;
+			background: $primary-color;
+
+			i,
+			span {
+				font-size: 14px;
+				color: $charade;
+				font-weight: 800;
+			}
+		}
+	}
+
+	&-contact {
+		.form-group {
+			margin-bottom: 10px;
+		}
+
+		.form-control {
+			border-radius: 0;
+			background: rgba(255, 255, 255, .10);
+			border: 0;
+			height: 40px;
+			padding-left: 18px;
+			font-size: 13px;
+			color: $text-color;
+		}
+
+		.different-control {
+			min-height: 140px;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+.btn {
+	// global button rule
+
+	border: 2px solid $white;
+	border-radius: 0;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: $white;
+	padding: .5rem 1.6rem;
+	position: relative;
+	background: transparent;
+
+	&--rightBorder {
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: -1.25rem;
+			min-width: 1.25rem; // equal to right position
+			height: 2px;
+			background: $white;
+		}
+	}
+
+	&--leftBorder {
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -1.25rem;
+			min-width: 1.25rem; // equal to right position
+			height: 2px;
+			background: $white;
+		}
+	}
+
+	&:hover {
+		background: $primary-color;
+		border-color: $primary-color;
+		color: $charade;
+
+		&.btn--rightBorder:after {
+			background: $primary-color;
+		}
+
+		&.btn--leftBorder:before {
+			background: $primary-color;
+		}
+	}
+
+	&.active {
+		background: $primary-color;
+		border-color: $primary-color;
+		color: $charade;
+
+		&.btn--rightBorder:after {
+			background: $primary-color;
+		}
+
+		&.btn--leftBorder:before {
+			background: $primary-color;
+		}
+	}
+
+	// dark btn
+	&-dark {
+		background: $charade;
+		border-color: $charade;
+		color: $primary-color;
+		padding: .7rem 1.4rem;
+
+		&.btn--rightBorder:after {
+			background: $charade;
+		}
+
+		&.btn--leftBorder:before {
+			background: $charade;
+		}
+
+		&:hover {
+			background: $charade;
+			color: $primary-color;
+			border-color: $charade;
+
+			&.btn--rightBorder:after {
+				background: $charade;
+			}
+
+			&.btn--rightBorder:before {
+				background: $charade;
+			}
+		}
+	}
+}

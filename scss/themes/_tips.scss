@@ -1,0 +1,22 @@
+.tips {
+	&-bg {
+		background: $primary-color;
+		padding: 90px 0;
+
+		.section-intro__subtitle {
+			margin-bottom: 20px;
+			color: $charade;
+		}
+
+		p {
+			margin-bottom: 0;
+			color: $charade;
+		}
+	}
+	.btn {
+		&:hover {
+			background: transparent;
+			color: $charade;
+		}
+	}
+}
